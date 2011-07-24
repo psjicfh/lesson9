@@ -56,6 +56,11 @@ git <=> gitk <=> qgit
     $ sudo updatebd(更新数据库) 显示了locate 的缺点
 ### $ find xxx
     $ find xxx|grep git//查找特定文件夹中的文件   grep:匹配一个字符串
+    akaedu@akaedu-desktop:~/work$ find lesson9|grep lesson9.md
+    lesson9/lesson9.md   //找到
+    akaedu@akaedu-desktop:~/work$ cd lesson9
+    akaedu@akaedu-desktop:~/work/lesson9$ find lesson9|grep lesson9.md
+    find: `lesson9': 没有那个文件或目录  //未找到
 ###任务管理器
     akaedu@akaedu-desktop:~$ ps aux | grep firefox 火狐浏览器
     akaedu@akaedu-desktop:~$ kill 1390 结束进程
