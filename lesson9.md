@@ -92,5 +92,4 @@ say_three_hi.c      6        for (i = 0; i < HOW_MANY_TIMES_TO_SAY_HELLO; i++)
 
 按“e”即可跳进程序里面，光标跳到要查找处，按“,f”退出。（这个要设置,f=q!）
 
-
-
+按“K”查看一些接口函数的定义和使用（此是按ctrl+]或ctrl+t不能跳转）
