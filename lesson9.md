@@ -34,3 +34,5 @@
 
 ###例：播放git.mov视频
     akaedu@akaedu-desktop:~/happycasts$ mplayer git.mov
+###与git相似的几个命令
+git <=> gitk <=> qgit
