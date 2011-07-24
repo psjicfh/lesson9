@@ -60,9 +60,37 @@ git <=> gitk <=> qgit
     lesson9/lesson9.md   //找到
     akaedu@akaedu-desktop:~/work$ cd lesson9
     akaedu@akaedu-desktop:~/work/lesson9$ find lesson9|grep lesson9.md
-    find: `lesson9': 没有那个文件或目录  //未找到
+    find: 'lesson9': 没有那个文件或目录  //未找到
 ###任务管理器
     akaedu@akaedu-desktop:~$ ps aux | grep firefox 火狐浏览器
     akaedu@akaedu-desktop:~$ kill 1390 结束进程
     akaedu@akaedu-desktop:~$ kill -9 1390 强行结束
 ###  akaedu@akaedu-desktop:~$ ls|grep tig(文件夹名) //看看当前目录下有无这个文件夹
+###在一个project里面 " xxx times(任意字符串)" 的应用
+    akaedu@akaedu-desktop:~/psjicfh$ git clone git://github.com/happypeter/hen.git  //克隆peter自己的一个项目
+    akaedu@akaedu-desktop:~/psjicfh/hen/search/curse$ vim README
+    akaedu@akaedu-desktop:~/psjicfh/hen/search/curse$ sudo apt-get install libncurses5 libncurses5-dev //要安装两个软件
+    akaedu@akaedu-desktop:~/psjicfh/hen/search/curse$ make
+    gcc -o xxx xxx.c -lcurses  //生成 "xxx" "-lcurses:xxx.c在库里面的定义"
+    即：akaedu@akaedu-desktop:~/psjicfh/hen/search/curse$ ldd xxx
+        linux-gate.so.1 =>  (0x009db000)
+        libncurses.so.5 => /lib/libncurses.so.5 (0x0058a000)
+        libc.so.6 => /lib/tls/i686/cmov/libc.so.6 (0x00831000)
+        libdl.so.2 => /lib/tls/i686/cmov/libdl.so.2 (0x009fe000)
+        /lib/ld-linux.so.2 (0x00216000)
+    安装 akaedu@akaedu-desktop:~/psjicfh/hen/search/curse$ sudo make install
+         [sudo] password for akaedu: 
+         mv xxx /bin                                   完毕
+##例子
+akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ xxx times
+
+say_three_hi.c      2        #define HOW_MANY_TIMES_TO_SAY_HELLO 3
+
+say_three_hi.c      6        for (i = 0; i < HOW_MANY_TIMES_TO_SAY_HELLO; i++)
+
+上面“xxx times”的作用是查找此项目中包含“times”的地方，上面两行即是查找到的项目
+
+按“e”即可跳进程序里面，光标跳到要查找处，按“,f”退出。（这个要设置,f=q!）
+
+
+
