@@ -23,4 +23,6 @@
     delete mode 100644 trash
     akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git push  //还原了
 
-
+###从当前版本跳回历史里的任何一个版本
+akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout 2a9cdbe8ce5f48fd46e8b950   //这一串16进制数是通过tig查看commit号
+在跳回来也同理滴！
