@@ -24,10 +24,11 @@
     akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git push  //还原了
 
 ###版本间的跳转
-akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout 2a9cdbe8ce5f48fd46e8b950   //这一串16进制数是通过tig查看commit号 其做了一个分支拷贝
-akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout master//回到原来即：master
-akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git branch //查看分支名称
-akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout 2a9cdbe8ce5 -b one_file_stare //给分支取个名字
-akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout master//回到master
-akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout one_file_stare //跳到one_file_stare分支
+    akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout 2a9cdbe8ce5f48fd46e8b950   
+                                //这一串16进制数是通过tig查看commit号 其做了一个分支拷贝
+    akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout master//回到原来即：master
+    akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git branch //查看分支名称
+    akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout 2a9cdbe8ce5 -b one_file_stare //给分支取个名字
+    akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout master//回到master
+    akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout one_file_stare //跳到one_file_stare分支
 
