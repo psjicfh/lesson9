@@ -32,3 +32,5 @@
     akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout master//回到master
     akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout one_file_stare //跳到one_file_stare分支
 
+###例：播放git.mov视频
+    akaedu@akaedu-desktop:~/happycasts$ mplayer git.mov
