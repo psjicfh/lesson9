@@ -1,4 +1,4 @@
-#lesson9笔记
+
 
 ###git revert
 作用是修改垃圾文件，即：假使在版本2的基础上做了版本3，并且已经push到远端服务器上。现在发现版本3是个垃圾修改，若想还原版本2的内容，“git revert HEAD”即可还原！
@@ -31,10 +31,33 @@
     akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout 2a9cdbe8ce5 -b one_file_stare //给分支取个名字
     akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout master//回到master
     akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout one_file_stare //跳到one_file_stare分支
+    akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git checkout master//回到master
+    akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git br -D one_file_state //删除分支名称
 
 ###例：播放git.mov视频
     akaedu@akaedu-desktop:~/happycasts$ mplayer git.mov
 ###与git相似的几个命令
 git <=> gitk <=> qgit
 
+###做版本的几点注意
+    akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ mv lesson7.c hello.c
+    akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ ls
+    a.out  hello.c  say_three_hi.c  say_three_hi.h  say_three_hi.h.gch  tags
+    akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git add . //跟踪所有文件
+    akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git commit -a -v //显示修改内容
+    akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git push
+    （注：执行完后发现仓库中包含了文件夹下的所有文件）
+    akaedu@akaedu-desktop:~/work/lesson7/lesson7-project$ git rm a.out say_three_hi.h.gch tags //删除多余文件
+
+
 ### which  find locate  grep
+### $ which git(或 ls tig ……) //查看命令位置
+### $ locate .vimrc(各种文件) //定义文件位置
+    $ sudo updatebd(更新数据库) 显示了locate 的缺点
+### $ find xxx
+    $ find xxx|grep git//查找特定文件夹中的文件   grep:匹配一个字符串
+###任务管理器
+    akaedu@akaedu-desktop:~$ ps aux | grep firefox 火狐浏览器
+    akaedu@akaedu-desktop:~$ kill 1390 结束进程
+    akaedu@akaedu-desktop:~$ kill -9 1390 强行结束
+###  akaedu@akaedu-desktop:~$ ls|grep tig(文件夹名) //看看当前目录下有无这个文件夹
