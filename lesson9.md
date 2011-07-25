@@ -98,4 +98,4 @@ say_three_hi.c      6        for (i = 0; i < HOW_MANY_TIMES_TO_SAY_HELLO; i++)
     akaedu@akaedu-desktop:~$ cd .config
     akaedu@akaedu-desktop:~/.config$ vim user-dirs.dirs
     XDG_DESKTOP_DIR="$HOME/桌面" //改桌面……
-
+###打开多个vim页面 new vnew  窗口间跳换ctrl+ww
